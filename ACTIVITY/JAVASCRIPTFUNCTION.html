@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .container {
+            max-width: 300px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+        
+        .dark-mode input {
+            background-color: #444;
+            color: #fff;
+        }
+        
+        .dark-mode button {
+            background-color: #555;
+            color: #fff;
+        }
+        
+        .dark-mode h1 {
+            color: #fff;
+        }
+        
+        .dark-mode #result {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculator</h1>
+        <input id="num1" type="number" placeholder="Number 1">
+        <input id="num2" type="number" placeholder="Number 2">
+        <button id="add-btn">Add</button>
+        <p id="result"></p>
+        <button id="mode-btn">Toggle Mode</button>
+    </div>
+
+    <script>
+        const addBtn = document.getElementById('add-btn');
+        const num1Input = document.getElementById('num1');
+        const num2Input = document.getElementById('num2');
+        const resultPara = document.getElementById('result');
+        const modeBtn = document.getElementById('mode-btn');
+        const container = document.querySelector('.container');
+    
+        addBtn.addEventListener('click', () => {
+            const num1 = parseFloat(num1Input.value);
+            const num2 = parseFloat(num2Input.value);
+    
+            if (isNaN(num1) || isNaN(num2)) {
+                resultPara.textContent = 'Please enter valid numbers.';
+            } else {
+                const result = num1 + num2;
+                resultPara.textContent = `Result: ${result}`;
+            }
+        });
+    
+        modeBtn.addEventListener('click', () => {
+            container.classList.toggle('dark-mode');
+        });
+    </script>
+    
+</body>
+</html>
