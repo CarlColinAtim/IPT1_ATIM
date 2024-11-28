@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience Section</title>
+    <link rel="stylesheet" href="C:\Users\ccati\OneDrive\Desktop\IPT_ATIM\docs\css/stylesExP.css">
+    
+</head>
+<body>
+    <a id="homeButton" href="index.html">Home</a>
+    <section id="Experience">
+        <button onclick="toggleDetails()">Experience</button>
+        <p class="hidden" id="experienceDetails">Manila HJR Marketing Corporation - Senior Account Executive <br><br> PBCOM (Philippne Bank of Communication) - Admin Assistant <br><br> Mesa Restaurant - Waiter <br><br> Jinggoy's Restaurant - Waiter </p>
+    </section>
+
+    <script>
+        function toggleDetails() {
+            const details = document.getElementById('experienceDetails');
+            details.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

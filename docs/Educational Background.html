@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience Section</title>
+    <link rel="stylesheet" href="C:\Users\ccati\OneDrive\Desktop\IPT_ATIM\docs\css/stylesEB.css">
+
+
+</head>
+<body>
+    <a id="homeButton" href="index.html">Home</a>
+    <section id="Experience">
+        <button onclick="toggleDetails()">Educational Background</button>
+        <p class="hidden" id="educationalbackgroundDetails">City of Malabon University - 2022 - up to present <br><br> Kaunlaran High School - 2005 - 2009 <br><br><br> Dagat - Dagatan Elemntary School - 1999 - 2005 </p>
+    </section>
+
+    <script>
+        function toggleDetails() {
+            const details = document.getElementById('educationalbackgroundDetails');
+            details.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Section</title>
+    <link rel="stylesheet" href="C:\Users\ccati\OneDrive\Desktop\IPT_ATIM\docs\css/stylesSkl.css">
+</head>
+<body>
+    <a id="homeButton" href="index.html">Home</a>
+    <section id="Skills">
+        <button onclick="toggleDetails()">Skills</button>
+        <p class="hidden" id="skillDetails">Problem Solving <br><br> Adaptability <br><br> Critical Thinking <br><br> Team Work</p>
+    </section>
+
+    <script>
+        function toggleDetails() {
+            const details = document.getElementById('skillDetails');
+            details.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
